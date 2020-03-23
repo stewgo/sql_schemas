@@ -8,7 +8,7 @@ insert into users (username, password, name, email, isMerchant, phoneNumber, add
 VALUES ('test_merchant', 'password', 'John Smith', 'test_merchant@gmail.com', true, '0412345678', 'Unit 123 202A Point St Pyrmont');
 
 insert into users (username, password, name, email, isMerchant, phoneNumber, address)
-VALUES ('test_purchaser', 'password', 'Jane Doe', 'test_purchaser@gmail.com', true, '0412345678', '200 Harris St Pyrmont');
+VALUES ('test_purchaser', 'password', 'Jane Doe', 'test_purchaser@gmail.com', false, '0412345678', '200 Harris St Pyrmont');
 
 
 
