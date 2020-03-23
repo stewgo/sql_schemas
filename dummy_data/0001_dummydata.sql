@@ -1,5 +1,6 @@
-delete from users;
+delete from orders;
 delete from products;
+delete from users;
 
 ALTER TABLE users AUTO_INCREMENT = 0;
 ALTER TABLE products AUTO_INCREMENT = 0;
