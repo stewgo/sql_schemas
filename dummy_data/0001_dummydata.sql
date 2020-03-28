@@ -6,10 +6,10 @@ ALTER TABLE users AUTO_INCREMENT = 0;
 ALTER TABLE products AUTO_INCREMENT = 0;
 
 insert into users (username, password, name, email, isMerchant, phoneNumber, address)
-VALUES ('test_merchant', 'password', 'John Smith', 'test_merchant@gmail.com', true, '0412345678', 'Unit 123 202A Point St Pyrmont');
+VALUES ('test_merchant', '$2b$12$ALAusESrcY3VzOwhF67oZOep8se2YWemmG/M9l5AIYN6iGzM3U7dq', 'John Smith', 'test_merchant@gmail.com', true, '0412345678', 'Unit 123 202A Point St Pyrmont');
 
 insert into users (username, password, name, email, isMerchant, phoneNumber, address)
-VALUES ('test_purchaser', 'password', 'Jane Doe', 'test_purchaser@gmail.com', false, '0412345678', '200 Harris St Pyrmont');
+VALUES ('test_purchaser', '$2b$12$197iV9i7y3oA8aw9Hm0tU.6pUxR4Sm4Zd36XdTlMs47mW8NkjuWjm', 'Jane Doe', 'test_purchaser@gmail.com', false, '0412345678', '200 Harris St Pyrmont');
 
 
 
