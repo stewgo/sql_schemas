@@ -1,7 +1,7 @@
+delete from accessTokens;
 delete from orders;
 delete from products;
 delete from users;
-delete from accessTokens;
 
 ALTER TABLE users AUTO_INCREMENT = 0;
 ALTER TABLE products AUTO_INCREMENT = 0;
