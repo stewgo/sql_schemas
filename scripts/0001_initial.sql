@@ -19,10 +19,11 @@ CREATE TABLE `products` (
   `description` varchar(80) NOT NULL DEFAULT '',
   `price` varchar(15) NOT NULL DEFAULT '',
   `availableDate` varchar(80) NOT NULL DEFAULT '',
+  `image` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `FK_ProductsUsers` (`merchantId`),
   CONSTRAINT `FK_ProductsUsers` FOREIGN KEY (`merchantId`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 
 CREATE TABLE `orders` (
