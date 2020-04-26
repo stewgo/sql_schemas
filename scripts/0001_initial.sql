@@ -7,6 +7,7 @@ CREATE TABLE `users` (
   `isMerchant` tinyint(1) NOT NULL DEFAULT 0,
   `phoneNumber` varchar(40) NOT NULL,
   `address` varchar(400) NOT NULL,
+  `pickupInfo` varchar(1000) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
@@ -18,7 +19,7 @@ CREATE TABLE `products` (
   `name` varchar(40) NOT NULL DEFAULT '',
   `description` varchar(80) NOT NULL DEFAULT '',
   `price` varchar(15) NOT NULL DEFAULT '',
-  `availableDate` varchar(80) NOT NULL DEFAULT '',
+  `availableDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `image` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `FK_ProductsUsers` (`merchantId`),
@@ -30,7 +31,7 @@ CREATE TABLE `orders` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `productId` int(11) unsigned NOT NULL,
   `purchaserId` int(11) unsigned NOT NULL,
-  `date` varchar(80) NOT NULL DEFAULT '',
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`),
   KEY `FK_OrdersUsers` (`purchaserId`),
   KEY `FK_OrdersProducts` (`productId`),
